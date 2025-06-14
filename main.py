@@ -23,6 +23,8 @@ project_root = os.path.dirname(os.path.abspath(__file__))
 print(f"Project root directory: {project_root}")
 download_dir = os.path.join(project_root,"public","download")
 upload_dir = os.path.join(project_root,"public","upload")
+os.makedirs(download_dir, exist_ok=True)
+os.makedirs(upload_dir, exist_ok=True)
 sys.path.append(project_root)
 
 
