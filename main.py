@@ -25,6 +25,9 @@ download_dir = os.path.join(project_root,"public","download")
 upload_dir = os.path.join(project_root,"public","upload")
 sys.path.append(project_root)
 
+
+
+
 logger = logging.getLogger(__name__)
 # 初始化应用
 # setup_log(app_server=config.BaseConfig.SERVICE_NAME, level=logging.DEBUG)
@@ -39,6 +42,9 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(docs_url=None, redoc_url=None)
 
+# 挂载 public/upload/ 作为静态文件服务器路径
+upload_static_path = os.path.join(project_root, "public", "upload")
+app.mount("/upload", StaticFiles(directory=upload_static_path), name="upload")
 
 
 # script_path = os.path.abspath(__file__)
