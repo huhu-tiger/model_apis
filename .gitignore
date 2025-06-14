@@ -1,0 +1,15 @@
+*.pdf
+*.pyc
+__pycache__/
+*.py[cod]
+**/__pycache__
+.idea/
+*.tar
+**/*.bin
+**/*.model
+*.log
+*.db
+/logs/*
+nacos-data/*
+*.png
+.venv/
